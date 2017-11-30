@@ -1,0 +1,30 @@
+var http = require("https");
+
+var options = {
+  "method": "POST",
+  "hostname": "jmlk74oovf.execute-api.eu-west-1.amazonaws.com",
+  "port": null,
+  "path": "/dev/sentiment?wait=true",
+  "headers": {
+    "content-type": "application/json",
+    "x-api-key": "9CAfxmC4WB10tnS9RY9oG92Io0M4trVp7HpTUEjR",
+    "cache-control": "no-cache",
+    "postman-token": "78bc7ac6-705f-eedd-63f2-ab4af8528096"
+  }
+};
+
+var req = http.request(options, function (res) {
+  var chunks = [];
+
+  res.on("data", function (chunk) {
+    chunks.push(chunk);
+  });
+
+  res.on("end", function () {
+    var body = Buffer.concat(chunks);
+    console.log(body.toString());
+  });
+});
+
+req.write(JSON.stringify({ textIn: 'Ruben es harto guapo', language: 'Spanish' }));
+req.end();

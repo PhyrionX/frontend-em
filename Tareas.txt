@@ -1,0 +1,7 @@
+ok, por favor pon todos los parámetros al principio como constantes, no los metas hardcoded
+y documenta, que lo tienen que usar otros aparte de ti
+y captura bien las diferentes excepciones para que otros lo pùedan depurar
+que pasa si te quitas la conexion de red, que error da?
+y si quitas el proxy?
+y si pones mal la url?
+y si pones mal la clave?

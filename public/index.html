@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        var settings = {
+          "url": "api/getUsers",
+          "method": "GET",
+        }
+
+        $.ajax(settings).done(function (response) {
+            $("#dataJson").html(response.message +
+                                "</br> <b>Language</b> " + response.parameters.language +
+                                "</br> <b>TextIn</b> " + response.parameters.textIn + 
+                                "</br> <b>Resultado sentimiento</b> " + response.results.prediction);
+            console.log($("#dataJson"));
+          console.log(response);
+        });
+    });
+});
+</script>
+</head>
+<body>
+
+<button>Send</button>
+</br>
+<p id="dataJson">
+
+</div>
+
+</body>
+</html>
