@@ -49,7 +49,7 @@ function createProject(req, res, next) {
     return res.status(200).send(projects)
 }
 
-function getUsers(req, res, next) {
+function getProjects(req, res, next) {
 
     return res.status(200).send(projects)
     /*User.getUsers(function(err,user) {
@@ -62,6 +62,6 @@ function login(req, res, next) {
 }
 
 exports.registrar = registrar;
-exports.getUsers = getUsers;
+exports.getProjects = getProjects;
 exports.login = login;
 exports.createProject = createProject;
