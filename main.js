@@ -50,7 +50,7 @@ app.post("/api/createProject", users.createProject);
 
 
 //Zona privada
-app.get("/api/private/getUsers", middleware.ensureAuthenticated, users.getUsers);
+// app.get("/api/private/getUsers", middleware.ensureAuthenticated, users.getUsers);
 
 app.get('*', function(req, res){
   res.status(404).send('<h1>Tíííííííííííííííííííío no me toques la URL o te meto!!!!!!</h1>');
