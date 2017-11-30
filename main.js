@@ -44,7 +44,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 //Zona pública
 app.post("/api/registrar", users.registrar);
-app.post("/api/login", users.login);
+app.post("/api/login", users.login); 
 app.get("/api/getUsers", users.getUsers);
 app.post("/api/createProject", users.createProject);
 
